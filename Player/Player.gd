@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const ACCELERATION = 3
-const FRICTION = 3
+const ACCELERATION = 7
+const FRICTION = 7
 const MAX_SPEED = 100
 
 func _physics_process(_delta):

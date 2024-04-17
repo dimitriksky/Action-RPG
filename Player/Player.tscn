@@ -5,17 +5,16 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wku5a"]
 radius = 4.0
-height = 14.0
+height = 12.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4gfvl")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
 texture = ExtResource("2_2ixnc")
 hframes = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 9)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_wku5a")
