@@ -1,19 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://5u7n2sw10ehp"]
+[gd_scene load_steps=5 format=3 uid="uid://5u7n2sw10ehp"]
 
 [ext_resource type="PackedScene" uid="uid://cmo3mfjtflxuf" path="res://Player/Player.tscn" id="1_1elbc"]
+[ext_resource type="Texture2D" uid="uid://dswvuldh0y13t" path="res://World/GrassBackground.png" id="1_qcafb"]
 [ext_resource type="PackedScene" uid="uid://d20dasl6afn2w" path="res://World/Bush/Bush.tscn" id="2_a0j0w"]
+
+[sub_resource type="TileSet" id="TileSet_772d8"]
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(72, 56)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+texture_repeat = 2
+position = Vector2(160, 90)
+texture = ExtResource("1_qcafb")
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 180)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_772d8")
+format = 2
 
 [node name="Player" parent="." instance=ExtResource("1_1elbc")]
+position = Vector2(128, 88)
 
 [node name="Bush" parent="." instance=ExtResource("2_a0j0w")]
-position = Vector2(40, 16)
+position = Vector2(168, 56)
 
 [node name="Bush2" parent="." instance=ExtResource("2_a0j0w")]
-position = Vector2(80, -32)
+position = Vector2(192, 96)
 
 [node name="Bush3" parent="." instance=ExtResource("2_a0j0w")]
-position = Vector2(-32, -32)
+position = Vector2(120, 144)
